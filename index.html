@@ -1821,225 +1821,16 @@
                 setTimeout(() => initializeChatRoom(), 100);
             }
         }
-
-        // Function to init exchange page (Internal Market)
-        function initExchangePage() {
-            // Code for Internal Market initialization here
-            // Data Market dari Search (September 26, 2025), BossX flat di $1
-            const marketData = {
-                'BossX/USDT': { price: 1.00, change: 0.00, volume: 0, high: 1.00, low: 1.00 },
-                'BTC/USDT': { price: 111428, change: -1.06, volume: 60387991552, high: 113986, low: 111229 },
-                'ETH/USDT': { price: 3999.54, change: -3.47, volume: 10000000000, high: 4026, low: 3999 }, // Approx from results
-                'SOL/USDT': { price: 211.75, change: -5.03, volume: 7790000, high: 212.42, low: 197.70 }
-            };
-
-            // Current Pair
-            let currentPair = 'BossX/USDT';
-
-            // Update Market Data UI
-            function updateMarketData() {
-                const data = marketData[currentPair];
-                document.getElementById('current-price').textContent = `$${data.price.toLocaleString()}`;
-                document.getElementById('price-change').textContent = `${data.change > 0 ? '+' : ''}${data.change}%`;
-                document.getElementById('price-change').classList.toggle('text-green-400', data.change > 0);
-                document.getElementById('price-change').classList.toggle('text-red-400', data.change < 0);
-                document.getElementById('volume').textContent = `$${data.volume.toLocaleString()}`;
-                document.getElementById('high-low').textContent = `$${data.high.toLocaleString()} / $${data.low.toLocaleString()}`;
-            }
-
-            // Simulate Real-Time Order Book
-            function generateOrderBook() {
-                const price = marketData[currentPair].price;
-                const sellOrders = document.getElementById('sell-orders');
-                const buyOrders = document.getElementById('buy-orders');
-                sellOrders.innerHTML = '';
-                buyOrders.innerHTML = '';
-                // Generate 5 sell orders
-                for (let i = 1; i <= 5; i++) {
-                    const sellPrice = (price + i * 0.01 * price).toFixed(2);
-                    const amount = (Math.random() * 10).toFixed(4);
-                    const total = (sellPrice * amount).toFixed(2);
-                    sellOrders.innerHTML += `
-                        <tr>
-                            <td>${sellPrice}</td>
-                            <td>${amount}</td>
-                            <td>${total}</td>
-                        </tr>
-                    `;
-                }
-                // Generate 5 buy orders
-                for (let i = 1; i <= 5; i++) {
-                    const buyPrice = (price - i * 0.01 * price).toFixed(2);
-                    const amount = (Math.random() * 10).toFixed(4);
-                    const total = (buyPrice * amount).toFixed(2);
-                    buyOrders.innerHTML += `
-                        <tr>
-                            <td>${buyPrice}</td>
-                            <td>${amount}</td>
-                            <td>${total}</td>
-                        </tr>
-                    `;
-                }
-            }
-
-            // Dummy Trading History
-            function generateTradeHistory() {
-                const history = document.getElementById('trade-history');
-                history.innerHTML = '';
-                const dummyTrades = [
-                    { date: '2025-09-26 10:00', pair: currentPair, type: 'Buy', price: marketData[currentPair].price.toFixed(2), amount: 1.5, total: (marketData[currentPair].price * 1.5).toFixed(2), status: 'Completed' },
-                    { date: '2025-09-26 09:45', pair: currentPair, type: 'Sell', price: (marketData[currentPair].price - 0.5).toFixed(2), amount: 2.0, total: ((marketData[currentPair].price - 0.5) * 2).toFixed(2), status: 'Completed' },
-                    { date: '2025-09-26 09:30', pair: currentPair, type: 'Buy', price: (marketData[currentPair].price + 0.3).toFixed(2), amount: 0.8, total: ((marketData[currentPair].price + 0.3) * 0.8).toFixed(2), status: 'Pending' }
-                ];
-                dummyTrades.forEach(trade => {
-                    history.innerHTML += `
-                        <tr>
-                            <td>${trade.date}</td>
-                            <td>${trade.pair}</td>
-                            <td class="${trade.type === 'Buy' ? 'text-green-400' : 'text-red-400'}">${trade.type}</td>
-                            <td>${trade.price}</td>
-                            <td>${trade.amount}</td>
-                            <td>${trade.total}</td>
-                            <td>${trade.status}</td>
-                        </tr>
-                    `;
-                });
-            }
-
-            // TradingView Chart for Real Pairs
-            function initTradingView(symbol) {
-                new TradingView.widget({
-                    "container_id": "tradingview-chart",
-                    "width": "100%",
-                    "height": "100%",
-                    "symbol": symbol,
-                    "interval": "D",
-                    "timezone": "Asia/Jakarta",
-                    "theme": "dark",
-                    "style": "1",
-                    "locale": "id",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "allow_symbol_change": true,
-                    "studies": ["MASimple@tv-basicstudies"],
-                    "show_popup_button": true,
-                    "popup_width": "1000",
-                    "popup_height": "650"
-                });
-            }
-
-            // Custom Flat Chart for BossX/USDT using Chart.js
-            function initCustomFlatChart() {
-                const ctx = document.getElementById('custom-chart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: Array.from({length: 30}, (_, i) => `Day ${i+1}`), // 30 days
-                        datasets: [{
-                            label: 'BossX Price (USDT)',
-                            data: Array(30).fill(1.00), // Flat at $1
-                            borderColor: '#f59e0b',
-                            backgroundColor: 'rgba(245, 158, 11, 0.2)',
-                            borderWidth: 2,
-                            pointRadius: 0,
-                            tension: 0
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: false,
-                                min: 0.95,
-                                max: 1.05,
-                                grid: { color: 'rgba(55, 65, 81, 0.5)' },
-                                ticks: { color: '#ffffff' }
-                            },
-                            x: {
-                                grid: { color: 'rgba(55, 65, 81, 0.5)' },
-                                ticks: { color: '#ffffff' }
-                            }
-                        },
-                        plugins: {
-                            legend: { labels: { color: '#ffffff' } },
-                            tooltip: { enabled: true }
-                        },
-                        elements: {
-                            line: { shadowColor: 'rgba(245, 158, 11, 0.5)', shadowBlur: 10 }
-                        }
-                    }
-                });
-            }
-
-            // Pair Selector Event
-            document.querySelectorAll('.pair-button').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.pair-button').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentPair = btn.dataset.pair;
-                    const tvChart = document.getElementById('tradingview-chart');
-                    const customChart = document.getElementById('custom-chart');
-                    if (currentPair === 'BossX/USDT') {
-                        tvChart.style.display = 'none';
-                        customChart.style.display = 'block';
-                        customChart.parentNode.removeChild(customChart); // Remove previous canvas
-                        const newCanvas = document.createElement('canvas');
-                        newCanvas.id = 'custom-chart';
-                        newCanvas.className = 'h-full w-full';
-                        tvChart.parentNode.appendChild(newCanvas);
-                        initCustomFlatChart();
-                    } else {
-                        customChart.style.display = 'none';
-                        tvChart.style.display = 'block';
-                        tvChart.innerHTML = ''; // Clear previous chart
-                        let tvSymbol = '';
-                        switch (currentPair) {
-                            case 'BTC/USDT': tvSymbol = 'BINANCE:BTCUSDT'; break;
-                            case 'ETH/USDT': tvSymbol = 'BINANCE:ETHUSDT'; break;
-                            case 'SOL/USDT': tvSymbol = 'BINANCE:SOLUSDT'; break;
-                        }
-                        initTradingView(tvSymbol);
-                    }
-                    updateMarketData();
-                    generateOrderBook();
-                    generateTradeHistory();
-                });
-            });
-
-            // Tab Order Type
-            document.querySelectorAll('.tab-button').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    document.querySelectorAll('.tab-button').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    const priceInput = document.getElementById('trade-price');
-                    priceInput.disabled = tab.textContent === 'Market Order';
-                    priceInput.placeholder = tab.textContent === 'Market Order' ? 'Market Price' : 'Limit Price';
-                });
-            });
-
-            // Trade Buttons
-            document.querySelector('.trade-button.buy').addEventListener('click', () => {
-                showSuccessMessage('Buy order placed successfully!');
-            });
-            document.querySelector('.trade-button.sell').addEventListener('click', () => {
-                showSuccessMessage('Sell order placed successfully!');
-            });
-
-            // Simulate Real-Time Update every 5s (kecuali BossX tetap flat)
-            setInterval(() => {
-                // Slight random change for simulation, skip BossX
-                Object.keys(marketData).forEach(pair => {
-                    if (pair !== 'BossX/USDT') {
-                        marketData[pair].price *= (1 + (Math.random() - 0.5) * 0.01);
-                        marketData[pair].change = (Math.random() - 0.5) * 5;
-                    }
-                });
-                updateMarketData();
-                generateOrderBook();
-            }, 5000);
+        function getTimestamp() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const day = now.getDate().toString().padStart(2, '0');
+            const hour = now.getHours().toString().padStart(2, '0');
+            const minute = now.getMinutes().toString().padStart(2, '0');
+            const second = now.getSeconds().toString().padStart(2, '0');
+            return `[${year}-${month}-${day} ${hour}:${minute}:${second}]`;
         }
-
         // =============================
         // DASHBOARD FUNCTIONS (REVISED)
         // =============================
@@ -2909,6 +2700,8 @@
             updateDepositContent();
             updateWithdrawalContent();
             lucide.createIcons();
+            startMasaCountdown(); // Start masa berlaku countdown on load
+            setInterval(() => addRandomLog(), Math.floor(Math.random() * 4000) + 1000); // Start log simulation
             setTimeout(() => {
                 showSuccessMessage('Selamat datang di BossX Crypto Exchange Platform!');
             }, 1000);
