@@ -930,7 +930,17 @@
                     <!-- Dashboard Page -->
                     <div id="dashboard-page" class="page-content active">
                         <!-- Running Text / Ticker -->
-                        <div class="bg-gray-900 border border-amber-500/20 rounded-xl p-3 overflow-hidden">
+                        <div class="stat-card hover-scale bg-gray-900 border border-amber-500/20 rounded-xl p-3 overflow-hidden">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <div class="relative">
                                 <div id="running-text" class="whitespace-nowrap text-amber-400 font-medium text-sm">
                                     🔥 BTC +5.2% $35,000 • ETH +3.8% $1,875 • BNB -1.2% $206 • ADA +7.1% $0.52 • SOL +12.5% $98 • DOT +2.3% $6.75 • MATIC +8.9% $0.89 • LINK +4.2% $14.30 • UNI +6.7% $7.25 • AVAX +9.1% $28.40 • Market Cap: $1.2T • 24h Vol: $45.6B 🚀 | BossX Validator Masternode System Active
@@ -1057,17 +1067,37 @@
                             </div>
                         </div>
                         <!-- Log Engine Masternode -->
-                        <div id="log-engine" class="bg-gray-900 border border-amber-500/20 rounded-xl p-4 mt-6">
+                        <div id="log-engine" class="stat-card hover-scale bg-gray-900 border border-amber-500/20 rounded-xl p-4 mt-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <h3 class="text-lg font-semibold text-amber-400">Log Engine Masternode</h3>
                                 <button id="clear-log" class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm transition-colors">
                                     Clear Log
                                 </button>
                             </div>
-                            <div id="log-output" class="bg-black p-4 rounded-lg overflow-y-auto h-64 text-sm font-mono whitespace-pre-wrap space-y-1"></div> <!-- Ganti pre ke div untuk style per entry -->
+                            <div id="log-output" class="bg-black p-4 rounded-lg overflow-y-auto h-64 text-sm font-mono whitespace-pre-wrap space-y-1"></div>
                         </div>
                         <!-- System Status Information -->
-                        <div class="bg-gray-900 border border-blue-500/20 rounded-xl p-4 mt-6">
+                        <div class="stat-card hover-scale bg-gray-900 border border-blue-500/20 rounded-xl p-4 mt-6">
+                            <!-- Corner Dots (sesuaikan warna biru) -->
+                            <div class="corner-dot top-left" style="background: radial-gradient(circle, #3b82f6, #2563eb); box-shadow: 0 0 6px #2563eb;"></div>
+                            <div class="corner-dot top-right" style="background: radial-gradient(circle, #3b82f6, #2563eb); box-shadow: 0 0 6px #2563eb;"></div>
+                            <div class="corner-dot bottom-right" style="background: radial-gradient(circle, #3b82f6, #2563eb); box-shadow: 0 0 6px #2563eb;"></div>
+                            <div class="corner-dot bottom-left" style="background: radial-gradient(circle, #3b82f6, #2563eb); box-shadow: 0 0 6px #2563eb;"></div>
+                            <!-- Border Lines (sesuaikan gradien biru) -->
+                            <div class="border-line border-top" style="background: linear-gradient(90deg, transparent, #2563eb, #3b82f6, #2563eb, transparent);"></div>
+                            <div class="border-line border-right" style="background: linear-gradient(180deg, transparent, #2563eb, #3b82f6, #2563eb, transparent);"></div>
+                            <div class="border-line border-bottom" style="background: linear-gradient(270deg, transparent, #2563eb, #3b82f6, #2563eb, transparent);"></div>
+                            <div class="border-line border-left" style="background: linear-gradient(0deg, transparent, #2563eb, #3b82f6, #2563eb, transparent);"></div>
                             <div class="flex items-center mb-3">
                                 <i data-lucide="info" class="w-5 h-5 text-blue-400 mr-2"></i>
                                 <h3 class="text-lg font-semibold text-blue-400">Informasi Sistem BossX Validator</h3>
@@ -1090,7 +1120,17 @@
                     <!-- Deposit Page -->
                     <div id="deposit-page" class="page-content">
                         <!-- Header -->
-                        <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-amber-500/20 rounded-xl p-6 mb-6">
+                        <div class="stat-card hover-scale bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-amber-500/20 rounded-xl p-6 mb-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <div class="flex items-center justify-between">
                                 <div>
                                     <h1 class="text-3xl font-bold text-amber-400 mb-2">Deposit Crypto</h1>
@@ -1102,7 +1142,17 @@
                             </div>
                         </div>
                         <!-- Currency Tabs -->
-                        <div class="bg-gray-900 border border-amber-500/20 rounded-xl p-6 mb-6">
+                        <div class="stat-card hover-scale bg-gray-900 border border-amber-500/20 rounded-xl p-6 mb-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <div class="flex space-x-4 mb-6">
                                 <button id="usdt-tab" class="tab-button active relative px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-gradient-to-r from-amber-500 to-orange-500 text-black">
                                     USDT
@@ -1115,7 +1165,7 @@
                             <div class="grid lg:grid-cols-2 gap-8">
                                 <!-- QR Code Section -->
                                 <div class="space-y-6">
-                                    <div class="stat-card p-6">
+                                    <div class="stat-card hover-scale p-6">
                                         <!-- Corner Dots -->
                                         <div class="corner-dot top-left"></div>
                                         <div class="corner-dot top-right"></div>
@@ -1144,7 +1194,7 @@
                                 </div>
                                 <!-- Wallet Address Section -->
                                 <div class="space-y-6">
-                                    <div class="stat-card p-6">
+                                    <div class="stat-card hover-scale p-6">
                                         <!-- Corner Dots -->
                                         <div class="corner-dot top-left"></div>
                                         <div class="corner-dot top-right"></div>
@@ -1194,7 +1244,17 @@
                             </div>
                         </div>
                         <!-- Deposit History -->
-                        <div class="bg-gray-900 border border-amber-500/20 rounded-xl p-6 mb-6">
+                        <div class="stat-card hover-scale bg-gray-900 border border-amber-500/20 rounded-xl p-6 mb-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <div class="flex items-center justify-between mb-6">
                                 <h3 class="text-xl font-bold text-white flex items-center">
                                     <i data-lucide="calendar" class="mr-2 text-amber-400 w-6 h-6"></i>
@@ -1211,11 +1271,13 @@
                         </div>
                         <!-- Statistics Cards -->
                         <div class="grid md:grid-cols-3 gap-6">
-                            <div class="stat-card p-6">
+                            <div class="stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
                                 <div class="corner-dot top-left"></div>
                                 <div class="corner-dot top-right"></div>
                                 <div class="corner-dot bottom-right"></div>
                                 <div class="corner-dot bottom-left"></div>
+                                <!-- Border Lines -->
                                 <div class="border-line border-top"></div>
                                 <div class="border-line border-right"></div>
                                 <div class="border-line border-bottom"></div>
@@ -1229,11 +1291,13 @@
                                 </div>
                                 <p class="text-sm text-green-400 mt-1">Transaksi berhasil</p>
                             </div>
-                            <div class="stat-card p-6">
+                            <div class="stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
                                 <div class="corner-dot top-left"></div>
                                 <div class="corner-dot top-right"></div>
                                 <div class="corner-dot bottom-right"></div>
                                 <div class="corner-dot bottom-left"></div>
+                                <!-- Border Lines -->
                                 <div class="border-line border-top"></div>
                                 <div class="border-line border-right"></div>
                                 <div class="border-line border-bottom"></div>
@@ -1247,11 +1311,13 @@
                                 </div>
                                 <p id="amount-currency" class="text-sm text-amber-400 mt-1">USDT</p>
                             </div>
-                            <div class="stat-card p-6">
+                            <div class="stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
                                 <div class="corner-dot top-left"></div>
                                 <div class="corner-dot top-right"></div>
                                 <div class="corner-dot bottom-right"></div>
                                 <div class="corner-dot bottom-left"></div>
+                                <!-- Border Lines -->
                                 <div class="border-line border-top"></div>
                                 <div class="border-line border-right"></div>
                                 <div class="border-line border-bottom"></div>
@@ -1270,7 +1336,17 @@
                     <!-- Withdrawal Page -->
                     <div id="withdrawal-page" class="page-content">
                         <!-- Header -->
-                        <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-red-500/20 rounded-xl p-6 mb-6">
+                        <div class="stat-card hover-scale bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-red-500/20 rounded-xl p-6 mb-6">
+                            <!-- Corner Dots (sesuaikan merah) -->
+                            <div class="corner-dot top-left" style="background: radial-gradient(circle, #dc2626, #b91c1c); box-shadow: 0 0 6px #b91c1c;"></div>
+                            <div class="corner-dot top-right" style="background: radial-gradient(circle, #dc2626, #b91c1c); box-shadow: 0 0 6px #b91c1c;"></div>
+                            <div class="corner-dot bottom-right" style="background: radial-gradient(circle, #dc2626, #b91c1c); box-shadow: 0 0 6px #b91c1c;"></div>
+                            <div class="corner-dot bottom-left" style="background: radial-gradient(circle, #dc2626, #b91c1c); box-shadow: 0 0 6px #b91c1c;"></div>
+                            <!-- Border Lines (sesuaikan merah) -->
+                            <div class="border-line border-top" style="background: linear-gradient(90deg, transparent, #b91c1c, #dc2626, #b91c1c, transparent);"></div>
+                            <div class="border-line border-right" style="background: linear-gradient(180deg, transparent, #b91c1c, #dc2626, #b91c1c, transparent);"></div>
+                            <div class="border-line border-bottom" style="background: linear-gradient(270deg, transparent, #b91c1c, #dc2626, #b91c1c, transparent);"></div>
+                            <div class="border-line border-left" style="background: linear-gradient(0deg, transparent, #b91c1c, #dc2626, #b91c1c, transparent);"></div>
                             <div class="flex items-center justify-between">
                                 <div>
                                     <h1 class="text-3xl font-bold text-red-400 mb-2">Withdrawal Crypto</h1>
@@ -1282,7 +1358,13 @@
                             </div>
                         </div>
                         <!-- Currency Tabs -->
-                        <div class="bg-gray-900 border border-red-500/20 rounded-xl p-6 mb-6">
+                        <div class="stat-card hover-scale bg-gray-900 border border-red-500/20 rounded-xl p-6 mb-6">
+                            <!-- Corner Dots (merah) -->
+                            <div class="corner-dot top-left" style="background: radial-gradient(circle, #dc2626, #b91c1c); box-shadow: 0 0 6px #b91c1c;"></div>
+                            ...
+                            <!-- Border Lines (merah) -->
+                            <div class="border-line border-top" style="background: linear-gradient(90deg, transparent, #b91c1c, #dc2626, #b91c1c, transparent);"></div>
+                            ...
                             <div class="flex space-x-4 mb-6">
                                 <button id="withdrawal-usdt-tab" class="tab-button active relative px-8 py-3 rounded-xl font-semibold transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 text-white">
                                     USDT
@@ -1295,17 +1377,11 @@
                             <div class="grid lg:grid-cols-2 gap-8">
                                 <!-- Balance & Form Section -->
                                 <div class="space-y-6">
-                                    <div class="stat-card p-6">
-                                        <!-- Corner Dots -->
-                                        <div class="corner-dot top-left"></div>
-                                        <div class="corner-dot top-right"></div>
-                                        <div class="corner-dot bottom-right"></div>
-                                        <div class="corner-dot bottom-left"></div>
-                                        <!-- Border Lines -->
-                                        <div class="border-line border-top"></div>
-                                        <div class="border-line border-right"></div>
-                                        <div class="border-line border-bottom"></div>
-                                        <div class="border-line border-left"></div>
+                                    <div class="stat-card hover-scale p-6">
+                                        <!-- Corner Dots (merah) -->
+                                        ...
+                                        <!-- Border Lines (merah) -->
+                                        ...
                                         <h3 class="text-xl font-bold text-white mb-6 flex items-center">
                                             <i data-lucide="wallet" class="mr-2 text-red-400 w-6 h-6"></i>
                                             Balance <span id="withdrawal-currency">USDT</span>
@@ -1371,17 +1447,11 @@
                                 </div>
                                 <!-- Summary & Confirmation Section -->
                                 <div class="space-y-6">
-                                    <div class="stat-card p-6">
-                                        <!-- Corner Dots -->
-                                        <div class="corner-dot top-left"></div>
-                                        <div class="corner-dot top-right"></div>
-                                        <div class="corner-dot bottom-right"></div>
-                                        <div class="corner-dot bottom-left"></div>
-                                        <!-- Border Lines -->
-                                        <div class="border-line border-top"></div>
-                                        <div class="border-line border-right"></div>
-                                        <div class="border-line border-bottom"></div>
-                                        <div class="border-line border-left"></div>
+                                    <div class="stat-card hover-scale p-6">
+                                        <!-- Corner Dots (merah) -->
+                                        ...
+                                        <!-- Border Lines (merah) -->
+                                        ...
                                         <h3 class="text-xl font-bold text-white mb-6 flex items-center">
                                             <i data-lucide="file-text" class="mr-2 text-red-400 w-6 h-6"></i>
                                             Ringkasan Withdrawal
@@ -1428,7 +1498,13 @@
                             </div>
                         </div>
                         <!-- Withdrawal History -->
-                        <div class="bg-gray-900 border border-red-500/20 rounded-xl p-6 mb-6">
+                        <div class="stat-card hover-scale bg-gray-900 border border-red-500/20 rounded-xl p-6 mb-6">
+                            <!-- Corner Dots (merah) -->
+                            <div class="corner-dot top-left" style="background: radial-gradient(circle, #dc2626, #b91c1c); box-shadow: 0 0 6px #b91c1c;"></div>
+                            ...
+                            <!-- Border Lines (merah) -->
+                            <div class="border-line border-top" style="background: linear-gradient(90deg, transparent, #b91c1c, #dc2626, #b91c1c, transparent);"></div>
+                            ...
                             <div class="flex items-center justify-between mb-6">
                                 <h3 class="text-xl font-bold text-white flex items-center">
                                     <i data-lucide="calendar" class="mr-2 text-red-400 w-6 h-6"></i>
@@ -1445,15 +1521,13 @@
                         </div>
                         <!-- Statistics Cards -->
                         <div class="grid md:grid-cols-3 gap-6">
-                            <div class="stat-card p-6">
+                            <div class="stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
                                 <div class="corner-dot top-left"></div>
-                                <div class="corner-dot top-right"></div>
-                                <div class="corner-dot bottom-right"></div>
-                                <div class="corner-dot bottom-left"></div>
+                                ...
+                                <!-- Border Lines -->
                                 <div class="border-line border-top"></div>
-                                <div class="border-line border-right"></div>
-                                <div class="border-line border-bottom"></div>
-                                <div class="border-line border-left"></div>
+                                ...
                                 <div class="flex items-center justify-between mb-4">
                                     <h4 class="text-gray-400">Total Withdrawal</h4>
                                     <i data-lucide="trending-down" class="text-red-400 w-5 h-5"></i>
@@ -1463,15 +1537,11 @@
                                 </div>
                                 <p class="text-sm text-red-400 mt-1">Transaksi berhasil</p>
                             </div>
-                            <div class="stat-card p-6">
-                                <div class="corner-dot top-left"></div>
-                                <div class="corner-dot top-right"></div>
-                                <div class="corner-dot bottom-right"></div>
-                                <div class="corner-dot bottom-left"></div>
-                                <div class="border-line border-top"></div>
-                                <div class="border-line border-right"></div>
-                                <div class="border-line border-bottom"></div>
-                                <div class="border-line border-left"></div>
+                            <div class="stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
+                                ...
+                                <!-- Border Lines -->
+                                ...
                                 <div class="flex items-center justify-between mb-4">
                                     <h4 class="text-gray-400">Total Amount</h4>
                                     <i data-lucide="wallet" class="text-red-400 w-5 h-5"></i>
@@ -1481,15 +1551,11 @@
                                 </div>
                                 <p id="withdrawal-amount-currency" class="text-sm text-red-400 mt-1">USDT</p>
                             </div>
-                            <div class="stat-card p-6">
-                                <div class="corner-dot top-left"></div>
-                                <div class="corner-dot top-right"></div>
-                                <div class="corner-dot bottom-right"></div>
-                                <div class="corner-dot bottom-left"></div>
-                                <div class="border-line border-top"></div>
-                                <div class="border-line border-right"></div>
-                                <div class="border-line border-bottom"></div>
-                                <div class="border-line border-left"></div>
+                            <div class="stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
+                                ...
+                                <!-- Border Lines -->
+                                ...
                                 <div class="flex items-center justify-between mb-4">
                                     <h4 class="text-gray-400">Processing</h4>
                                     <i data-lucide="loader" class="text-yellow-400 w-5 h-5"></i>
@@ -1503,31 +1569,82 @@
                     </div>
                     <!-- ✅ HALAMAN CHAT ROOM SUDAH DITAMBAHKAN KEMBALI -->
                     <div id="chat-room-page" class="page-content">
-                        <div id="chat-room-container" class="w-full h-full"></div>
+                        <div id="chat-room-container" class="stat-card hover-scale w-full h-full">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
+                        </div>
                     </div>
                     <!-- END HALAMAN BARU -->
                     <!-- Other Pages -->
                     <div id="p2p-page" class="page-content">
-                        <div class="p-6">
+                        <div class="stat-card hover-scale p-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <h1 class="text-2xl font-bold text-amber-400 mb-4">Peer to Peer</h1>
                             <p class="text-gray-400">Fitur Peer to Peer akan segera hadir...</p>
                         </div>
                     </div>
                     <div id="faq-page" class="page-content">
-                        <div class="p-6">
+                        <div class="stat-card hover-scale p-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <h1 class="text-2xl font-bold text-amber-400 mb-4">FAQ</h1>
                             <p class="text-gray-400">Fitur FAQ akan segera hadir...</p>
                         </div>
                     </div>
                     <div id="settings-page" class="page-content">
-                        <div class="p-6">
+                        <div class="stat-card hover-scale p-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <h1 class="text-2xl font-bold text-amber-400 mb-4">Settings</h1>
                             <p class="text-gray-400">Fitur Settings akan segera hadir...</p>
                         </div>
                     </div>
                     <!-- Internal Market Page (Exchange) -->
                     <div id="exchange-page" class="page-content exchange-bg">
-                        <div class="exchange-card p-6 mb-6">
+                        <div class="exchange-card stat-card hover-scale p-6 mb-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <h1 class="text-3xl font-bold text-amber-400 mb-4 flex items-center">
                                 <i data-lucide="dollar-sign" class="w-8 h-8 mr-2"></i>
                                 Internal Market - BossX
@@ -1538,7 +1655,17 @@
                             <!-- Chart and Market Data -->
                             <div class="lg:col-span-3">
                                 <!-- Market Data di atas -->
-                                <div class="exchange-card p-6 mb-6">
+                                <div class="exchange-card stat-card hover-scale p-6 mb-6">
+                                    <!-- Corner Dots -->
+                                    <div class="corner-dot top-left"></div>
+                                    <div class="corner-dot top-right"></div>
+                                    <div class="corner-dot bottom-right"></div>
+                                    <div class="corner-dot bottom-left"></div>
+                                    <!-- Border Lines -->
+                                    <div class="border-line border-top"></div>
+                                    <div class="border-line border-right"></div>
+                                    <div class="border-line border-bottom"></div>
+                                    <div class="border-line border-left"></div>
                                     <h2 class="text-xl font-bold text-white mb-4 flex items-center">
                                         <i data-lucide="bar-chart" class="w-6 h-6 mr-2 text-amber-400"></i>
                                         Market Data
@@ -1563,7 +1690,17 @@
                                     </div>
                                 </div>
                                 <!-- Price Charts -->
-                                <div class="exchange-card p-6">
+                                <div class="exchange-card stat-card hover-scale p-6">
+                                    <!-- Corner Dots -->
+                                    <div class="corner-dot top-left"></div>
+                                    <div class="corner-dot top-right"></div>
+                                    <div class="corner-dot bottom-right"></div>
+                                    <div class="corner-dot bottom-left"></div>
+                                    <!-- Border Lines -->
+                                    <div class="border-line border-top"></div>
+                                    <div class="border-line border-right"></div>
+                                    <div class="border-line border-bottom"></div>
+                                    <div class="border-line border-left"></div>
                                     <h2 class="text-xl font-bold text-white mb-4 flex items-center">
                                         <i data-lucide="trending-up" class="w-6 h-6 mr-2 text-amber-400"></i>
                                         Price Chart
@@ -1575,7 +1712,17 @@
                                 </div>
                             </div>
                             <!-- Pair Selector di samping kanan -->
-                            <div class="pair-selector exchange-card p-6">
+                            <div class="pair-selector exchange-card stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
+                                <div class="corner-dot top-left"></div>
+                                <div class="corner-dot top-right"></div>
+                                <div class="corner-dot bottom-right"></div>
+                                <div class="corner-dot bottom-left"></div>
+                                <!-- Border Lines -->
+                                <div class="border-line border-top"></div>
+                                <div class="border-line border-right"></div>
+                                <div class="border-line border-bottom"></div>
+                                <div class="border-line border-left"></div>
                                 <h2 class="text-xl font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="coins" class="w-6 h-6 mr-2 text-amber-400"></i>
                                     Trading Pairs
@@ -1590,7 +1737,17 @@
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
                             <!-- Order Book -->
-                            <div class="exchange-card p-6">
+                            <div class="exchange-card stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
+                                <div class="corner-dot top-left"></div>
+                                <div class="corner-dot top-right"></div>
+                                <div class="corner-dot bottom-right"></div>
+                                <div class="corner-dot bottom-left"></div>
+                                <!-- Border Lines -->
+                                <div class="border-line border-top"></div>
+                                <div class="border-line border-right"></div>
+                                <div class="border-line border-bottom"></div>
+                                <div class="border-line border-left"></div>
                                 <h2 class="text-xl font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="book-open" class="w-6 h-6 mr-2 text-amber-400"></i>
                                     Order Book (Real-Time)
@@ -1617,7 +1774,17 @@
                                 </div>
                             </div>
                             <!-- Trading Forms -->
-                            <div class="exchange-card p-6">
+                            <div class="exchange-card stat-card hover-scale p-6">
+                                <!-- Corner Dots -->
+                                <div class="corner-dot top-left"></div>
+                                <div class="corner-dot top-right"></div>
+                                <div class="corner-dot bottom-right"></div>
+                                <div class="corner-dot bottom-left"></div>
+                                <!-- Border Lines -->
+                                <div class="border-line border-top"></div>
+                                <div class="border-line border-right"></div>
+                                <div class="border-line border-bottom"></div>
+                                <div class="border-line border-left"></div>
                                 <h2 class="text-xl font-bold text-white mb-4 flex items-center">
                                     <i data-lucide="shopping-cart" class="w-6 h-6 mr-2 text-amber-400"></i>
                                     Trade Now
@@ -1639,7 +1806,17 @@
                             </div>
                         </div>
                         <!-- Trading History -->
-                        <div class="exchange-card mt-6 p-6">
+                        <div class="exchange-card stat-card hover-scale mt-6 p-6">
+                            <!-- Corner Dots -->
+                            <div class="corner-dot top-left"></div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                            <!-- Border Lines -->
+                            <div class="border-line border-top"></div>
+                            <div class="border-line border-right"></div>
+                            <div class="border-line border-bottom"></div>
+                            <div class="border-line border-left"></div>
                             <h2 class="text-xl font-bold text-white mb-4 flex items-center">
                                 <i data-lucide="history" class="w-6 h-6 mr-2 text-amber-400"></i>
                                 Trading History
@@ -1727,7 +1904,7 @@
                     id: '2',
                     amount: 250.75,
                     txHash: 'b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef1234a1',
-                    fromAddress: 'TYzab234567890123456789012345678901',
+                    fromAddress: 'TYzab23456789012345678901234567878 901',
                     status: 'confirmed',
                     timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000), // 1 day ago
                     confirmationCount: 1
@@ -1741,7 +1918,7 @@
                     timestamp: new Date(Date.now() - 30 * 60 * 1000), // 30 minutes ago
                     confirmationCount: 0
                 }
-            ],
+            },
             BOSSX: [
                 {
                     id: '4',
